@@ -1,13 +1,20 @@
 {
-  "description": "Livewire adapter for Drupal Migration.",
-  "require": {
-    "liberusoftware/module-cms-drupal-migration": "^0.1",
-    "liberusoftware/module-cms-migration-framework": "^0.1",
-    "php": "^8.5",
-    "livewire/livewire": "^4.4.8"
-  },
   "name": "liberusoftware/module-cms-drupal-migration-livewire",
+  "description": "Livewire adapter for Drupal Migration.",
+  "type": "liberu-module",
   "version": "0.1.0",
+  "license": "MIT",
+  "require": {
+    "php": "^8.5",
+    "livewire/livewire": "^4.4.8",
+    "liberusoftware/module-cms-drupal-migration": "^0.1",
+    "liberusoftware/module-cms-migration-framework": "^0.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Liberu\\Cms\\DrupalMigrationLivewire\\": "src/"
+    }
+  },
   "extra": {
     "liberu": {
       "name": "module-cms-drupal-migration-livewire",
@@ -17,13 +24,6 @@
       "providers": [
         "Liberu\\Cms\\DrupalMigrationLivewire\\DrupalMigrationLivewireServiceProvider"
       ]
-    }
-  },
-  "type": "liberu-module",
-  "license": "MIT",
-  "autoload": {
-    "psr-4": {
-      "Liberu\\Cms\\DrupalMigrationLivewire\\": "src/"
     }
   }
 }
